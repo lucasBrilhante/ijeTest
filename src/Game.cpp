@@ -15,7 +15,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 		if(m_pWindow != 0) // window init success
 		{
 			cout << "window creation success\n";
-			m_pRenderer = SDL_CreateRenderer(m_pWindow, -1, 0);
+			m_pRenderer = SDL_CreateRenderer(m_pWindow, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 			if(m_pRenderer != 0) // renderer init success
 			{
 				cout << "renderer creation success\n";
@@ -55,7 +55,7 @@ void Game::render()
 {
 	SDL_Texture * pika_texture = NULL;
 	SDL_Surface * image = NULL;
- 	image = IMG_Load("assets/pika.png");
+ 	image = IMG_Load("assets/pikasheet.png");
 
      if (image == NULL)
      {
@@ -76,8 +76,8 @@ void Game::render()
      }
       cout << "convert image sucess\n";
 
-     int play_button_w = image->w;
-     int play_button_h = image->h;
+     int play_button_w = image->w/4;
+     int play_button_h = image->h/4;
  
      SDL_FreeSurface(image);
      image = NULL;
@@ -86,8 +86,12 @@ void Game::render()
 
      SDL_Rect renderQuad = {x, y, play_button_w, play_button_h};
      cout << "load image sucess\n";
-
-     SDL_RenderCopy(m_pRenderer, pika_texture, NULL, &renderQuad);
+     SDL_Rect SrcR;
+     SrcR.x = i;
+     SrcR.y = j;
+     SrcR.w = 64;
+     SrcR.h = 64;
+     SDL_RenderCopy(m_pRenderer, pika_texture, &SrcR, &renderQuad);
       cout << "rendercopy sucess\n";
 
      SDL_RenderPresent(m_pRenderer);
@@ -112,10 +116,26 @@ void Game::handleEvents()
 		case SDL_KEYDOWN:
 		    switch (event.key.keysym.sym)
 		    {
-		        case SDLK_LEFT:  x = x - 10; break;
-		        case SDLK_RIGHT: x = x + 10; break;
-		        case SDLK_UP:    y = y - 10; break;
-		        case SDLK_DOWN:  y = y + 10; break;
+		        case SDLK_LEFT:  
+		        	x = x - 20; 
+		        	j = 64;
+		        	i = (i+ 64)%256;
+		        	break;
+		        case SDLK_RIGHT: 
+		        	x = x + 20; 
+		        	j = 128;
+		        	i = (i+ 64)%256;
+		        	break;
+		        case SDLK_UP:    
+		        	j = 192;
+		        	i = (i+ 64)%256;
+			        y = y - 20; 
+			        break;
+		        case SDLK_DOWN:
+		        	j = 0;
+		        	i = (i+ 64)%256;  
+		        	y = y + 20; 
+		        	break;
 		    }
 		    break;
 		default:
