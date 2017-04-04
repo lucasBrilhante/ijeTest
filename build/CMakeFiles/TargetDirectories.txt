@@ -1,0 +1,2 @@
+/home/lucas/git/Jogos2017/sdl2/exemploLivro/build/engine/CMakeFiles/engine.dir
+/home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles/princerescue.dir

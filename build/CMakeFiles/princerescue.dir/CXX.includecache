@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../engine/include/Game.h
+TextureManager.h
+../engine/include/TextureManager.h
+SDL2/SDL.h
+-
+
+../engine/include/TextureManager.h
+string
+-
+map
+-
+SDL2/SDL_image.h
+-
+
+/home/lucas/git/Jogos2017/sdl2/exemploLivro/src/main.cpp
+Game.h
+/home/lucas/git/Jogos2017/sdl2/exemploLivro/src/Game.h
+iostream
+-
+

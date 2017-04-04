@@ -1,6 +1,6 @@
 #ifndef __Game__
 #define __Game__
-
+#include "TextureManager.h"
 #include <SDL2/SDL.h>
 
 class Game
@@ -14,6 +14,7 @@ class Game
 		void update();
 		void handleEvents();
 		void clean();
+		void draw();
 		// a function to access the private running variable
 		bool running() { return m_bRunning; }
 	
@@ -22,7 +23,7 @@ class Game
 		int y;
 		int i;
 		int j;
-		SDL_Texture* m_pTexture; // the new SDL_Texture variable
+		TextureManager* m_tm;
 		SDL_Rect m_sourceRectangle; // the first rectangle
 		SDL_Rect m_destinationRectangle; // another rectangle
 		SDL_Window* m_pWindow;

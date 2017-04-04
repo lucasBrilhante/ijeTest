@@ -1,0 +1,2 @@
+/usr/bin/ar cr libengine.a  CMakeFiles/engine.dir/src/TextureManager.cpp.o CMakeFiles/engine.dir/src/Game.cpp.o
+/usr/bin/ranlib libengine.a

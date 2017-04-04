@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <iostream>
 #include <SDL2/SDL_image.h>
+#include <SDL2/SDL.h>
+#include "TextureManager.h"
+
 
 using namespace std;
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, int flags)
@@ -43,8 +46,9 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 	m_bRunning = true; // everything inited successfully,
 	//parte de imagem
 	x = 0;y=0;
+	m_tm = new TextureManager();
+	m_tm->load("assets/pikasheet.png","pika",m_pRenderer);
 	render();
-
 	//SDL_RenderCopy(m_pRenderer, m_pTexture, &m_sourceRectangle, &m_destinationRectangle);
 
 	
@@ -53,7 +57,16 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 
 void Game::render()
 {
-	SDL_Texture * pika_texture = NULL;
+	SDL_RenderClear(m_pRenderer);
+
+	m_tm->drawFrame("pika",x,y,64,
+		64,i,j,m_pRenderer);
+	cout << "Frame desenhado\n";
+
+	SDL_RenderPresent(m_pRenderer);
+	cout << "Mostrado\n";
+
+	/*SDL_Texture * pika_texture = NULL;
 	SDL_Surface * image = NULL;
  	image = IMG_Load("assets/pikasheet.png");
 
@@ -86,22 +99,19 @@ void Game::render()
 
      SDL_Rect renderQuad = {x, y, play_button_w, play_button_h};
      cout << "load image sucess\n";
-     SDL_Rect SrcR;
-     SrcR.x = i;
-     SrcR.y = j;
-     SrcR.w = 64;
-     SrcR.h = 64;
+     SDL_Rect SrcR{i,j,64,64};
      SDL_RenderCopy(m_pRenderer, pika_texture, &SrcR, &renderQuad);
       cout << "rendercopy sucess\n";
 
      SDL_RenderPresent(m_pRenderer);
      cout << "show\n";
 
-	/*
+	
 	SDL_RenderClear(m_pRenderer); // clear the renderer to
 	SDL_RenderPresent(m_pRenderer); // draw to the screen
 	*/
 }
+
 void Game::handleEvents()
 {
 	SDL_Event event;
@@ -118,22 +128,22 @@ void Game::handleEvents()
 		    {
 		        case SDLK_LEFT:  
 		        	x = x - 20; 
-		        	j = 64;
-		        	i = (i+ 64)%256;
+		        	j = 1;
+		        	i = (i+ 1)%4;
 		        	break;
 		        case SDLK_RIGHT: 
 		        	x = x + 20; 
-		        	j = 128;
-		        	i = (i+ 64)%256;
+		        	j = 2;
+		        	i = (i+ 1)%4;
 		        	break;
 		        case SDLK_UP:    
-		        	j = 192;
-		        	i = (i+ 64)%256;
+		        	j = 3;
+		        	i = (i+ 1)%4;
 			        y = y - 20; 
 			        break;
 		        case SDLK_DOWN:
 		        	j = 0;
-		        	i = (i+ 64)%256;  
+		        	i = (i+ 1)%4;  
 		        	y = y + 20; 
 		        	break;
 		    }
@@ -143,6 +153,7 @@ void Game::handleEvents()
 		}
 	}
 }
+
 void Game::clean()
 {
 	cout << "cleaning game\n";
