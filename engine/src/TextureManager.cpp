@@ -3,6 +3,18 @@
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL.h>
 
+TextureManager* TextureManager::instance = 0;
+
+TextureManager* TextureManager::getInstance(){
+	if(instance == 0){
+		instance = new TextureManager();
+		return instance;
+	}
+	return instance;
+}
+
+TextureManager::TextureManager(){}
+
 bool TextureManager::load(std::string fileName,std::string id, SDL_Renderer* pRenderer) {
 	
 	SDL_Surface* pTempSurface = IMG_Load(fileName.c_str());

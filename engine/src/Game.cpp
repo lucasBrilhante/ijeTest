@@ -5,8 +5,9 @@
 #include <SDL2/SDL.h>
 #include "TextureManager.h"
 
-
 using namespace std;
+
+
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, int flags)
 {
 	// attempt to initialize SDL
@@ -46,8 +47,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 	m_bRunning = true; // everything inited successfully,
 	//parte de imagem
 	x = 0;y=0;
-	m_tm = new TextureManager();
-	m_tm->load("assets/pikasheet.png","pika",m_pRenderer);
+	TextureManager::getInstance()->load("assets/pikasheet.png","pika",m_pRenderer);
 	render();
 	//SDL_RenderCopy(m_pRenderer, m_pTexture, &m_sourceRectangle, &m_destinationRectangle);
 
@@ -59,57 +59,12 @@ void Game::render()
 {
 	SDL_RenderClear(m_pRenderer);
 
-	m_tm->drawFrame("pika",x,y,64,
+	TextureManager::getInstance()->drawFrame("pika",x,y,64,
 		64,i,j,m_pRenderer);
 	cout << "Frame desenhado\n";
 
 	SDL_RenderPresent(m_pRenderer);
 	cout << "Mostrado\n";
-
-	/*SDL_Texture * pika_texture = NULL;
-	SDL_Surface * image = NULL;
- 	image = IMG_Load("assets/pikasheet.png");
-
-     if (image == NULL)
-     {
-   		cout << "load image fail\n";
-
-        std::exit(EXIT_FAILURE);
-     }
-
-     cout << "load image sucess\n";
-
-     pika_texture = SDL_CreateTextureFromSurface(m_pRenderer, image);
- 
-     if (pika_texture == NULL)
-     {
-   		cout << "Convert to texture fail\n";
-
-         std::exit(EXIT_FAILURE);
-     }
-      cout << "convert image sucess\n";
-
-     int play_button_w = image->w/4;
-     int play_button_h = image->h/4;
- 
-     SDL_FreeSurface(image);
-     image = NULL;
-	 SDL_RenderClear(m_pRenderer);
-     cout << "setup sucess\n";
-
-     SDL_Rect renderQuad = {x, y, play_button_w, play_button_h};
-     cout << "load image sucess\n";
-     SDL_Rect SrcR{i,j,64,64};
-     SDL_RenderCopy(m_pRenderer, pika_texture, &SrcR, &renderQuad);
-      cout << "rendercopy sucess\n";
-
-     SDL_RenderPresent(m_pRenderer);
-     cout << "show\n";
-
-	
-	SDL_RenderClear(m_pRenderer); // clear the renderer to
-	SDL_RenderPresent(m_pRenderer); // draw to the screen
-	*/
 }
 
 void Game::handleEvents()
