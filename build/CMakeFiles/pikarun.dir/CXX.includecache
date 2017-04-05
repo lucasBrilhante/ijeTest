@@ -34,15 +34,17 @@ SDL2/SDL_ttf.h
 SDL2/SDL_mixer.h
 -
 
-/home/lucas/git/Jogos2017/sdl2/exemploLivro/engine/src/Game.cpp
-Game.h
-/home/lucas/git/Jogos2017/sdl2/exemploLivro/engine/src/Game.h
-TextureManager.h
-/home/lucas/git/Jogos2017/sdl2/exemploLivro/engine/src/TextureManager.h
-sdl2include.hpp
-/home/lucas/git/Jogos2017/sdl2/exemploLivro/engine/src/sdl2include.hpp
-stdio.h
+../include/gameglobals.hpp
+string
 -
+utility
+-
+
+/home/lucas/git/Jogos2017/sdl2/exemploLivro/src/main.cpp
+Game.h
+/home/lucas/git/Jogos2017/sdl2/exemploLivro/src/Game.h
+gameglobals.hpp
+/home/lucas/git/Jogos2017/sdl2/exemploLivro/src/gameglobals.hpp
 iostream
 -
 

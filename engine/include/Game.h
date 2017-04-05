@@ -1,15 +1,19 @@
 #ifndef __Game__
 #define __Game__
+
 #include "TextureManager.h"
-#include <SDL2/SDL.h>
+#include "sdl2include.hpp"
+#include <unordered_map>
+#include <string>
 
 class Game
 {
 	public:
-		Game() {}
+		Game(std::string name, std::pair<int, int> window_size)
+		: title(name), m_window_size(window_size) {}
 		~Game() {}
 		// simply set the running variable to true
-		bool init(const char* title, int xpos, int ypos, int width, int height, int flags);
+		bool init();
 		void render();
 		void update();
 		void handleEvents();
@@ -23,6 +27,8 @@ class Game
 		int y;
 		int i;
 		int j;
+		std::string title;
+		std::pair<int, int> m_window_size;
 		TextureManager* m_tm;
 		SDL_Rect m_sourceRectangle; // the first rectangle
 		SDL_Rect m_destinationRectangle; // another rectangle

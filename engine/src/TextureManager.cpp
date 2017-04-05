@@ -1,7 +1,7 @@
 #include "TextureManager.h"
+#include "sdl2include.hpp"
+
 #include <iostream>
-#include <SDL2/SDL_image.h>
-#include <SDL2/SDL.h>
 
 TextureManager* TextureManager::instance = 0;
 

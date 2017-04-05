@@ -1,12 +1,14 @@
 #include "Game.h"
+#include "gameglobals.hpp"
 #include <iostream>
-// our Game object
-Game* g_game = 0;
+
 using namespace std;
-int main(int argc, char* argv[])
+
+int main()
 {
-	g_game = new Game();
-	g_game->init("Chapter 1", 100, 100, 640, 480, 0);
+	Game* g_game = 0;
+	g_game = new Game(globals::game_name,globals::window_size);
+	g_game->init();
 	cout << g_game->running() << endl;
 	while(g_game->running())
 	{

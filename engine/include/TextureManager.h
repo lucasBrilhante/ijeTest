@@ -2,8 +2,8 @@
 #define __TextureManager__
 #include <string>
 #include <map>
-#include <SDL2/SDL_image.h>
 
+#include "sdl2include.hpp"
 
 class TextureManager{
 

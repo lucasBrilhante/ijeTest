@@ -1,21 +1,29 @@
 #include "Game.h"
+#include "TextureManager.h"
+#include "sdl2include.hpp"
+
 #include <stdio.h>
 #include <iostream>
-#include <SDL2/SDL_image.h>
-#include <SDL2/SDL.h>
-#include "TextureManager.h"
+
+
 
 using namespace std;
 
 
-bool Game::init(const char* title, int xpos, int ypos, int width, int height, int flags)
+bool Game::init()
 {
 	// attempt to initialize SDL
 	if(SDL_Init(SDL_INIT_EVERYTHING) >= 0)
 	{
 		cout << "SDL init success\n";
 		// init the window
-		m_pWindow = SDL_CreateWindow(title, xpos, ypos, width, height, flags);
+		m_pWindow = SDL_CreateWindow(
+			title.c_str(), 
+			SDL_WINDOWPOS_CENTERED, 
+			SDL_WINDOWPOS_CENTERED, 
+			m_window_size.first, 
+			m_window_size.second, 
+			SDL_WINDOW_SHOWN);
 		if(m_pWindow != 0) // window init success
 		{
 			cout << "window creation success\n";

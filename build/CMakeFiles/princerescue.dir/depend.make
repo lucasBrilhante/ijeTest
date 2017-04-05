@@ -3,5 +3,6 @@
 
 CMakeFiles/princerescue.dir/src/main.cpp.o: ../engine/include/Game.h
 CMakeFiles/princerescue.dir/src/main.cpp.o: ../engine/include/TextureManager.h
+CMakeFiles/princerescue.dir/src/main.cpp.o: ../engine/include/sdl2include.hpp
 CMakeFiles/princerescue.dir/src/main.cpp.o: ../src/main.cpp
 

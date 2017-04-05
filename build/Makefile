@@ -99,17 +99,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named princerescue
+# Target rules for targets named pikarun
 
 # Build rule for target.
-princerescue: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 princerescue
-.PHONY : princerescue
+pikarun: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pikarun
+.PHONY : pikarun
 
 # fast build rule for target.
-princerescue/fast:
-	$(MAKE) -f CMakeFiles/princerescue.dir/build.make CMakeFiles/princerescue.dir/build
-.PHONY : princerescue/fast
+pikarun/fast:
+	$(MAKE) -f CMakeFiles/pikarun.dir/build.make CMakeFiles/pikarun.dir/build
+.PHONY : pikarun/fast
 
 #=============================================================================
 # Target rules for targets named engine
@@ -129,7 +129,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/princerescue.dir/build.make CMakeFiles/princerescue.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/pikarun.dir/build.make CMakeFiles/pikarun.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -137,7 +137,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/princerescue.dir/build.make CMakeFiles/princerescue.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/pikarun.dir/build.make CMakeFiles/pikarun.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -145,7 +145,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/princerescue.dir/build.make CMakeFiles/princerescue.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/pikarun.dir/build.make CMakeFiles/pikarun.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -155,7 +155,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... princerescue"
+	@echo "... pikarun"
 	@echo "... rebuild_cache"
 	@echo "... engine"
 	@echo "... src/main.o"

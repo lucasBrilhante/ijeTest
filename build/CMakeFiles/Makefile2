@@ -53,38 +53,38 @@ CMAKE_SOURCE_DIR = /home/lucas/git/Jogos2017/sdl2/exemploLivro
 CMAKE_BINARY_DIR = /home/lucas/git/Jogos2017/sdl2/exemploLivro/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/princerescue.dir
+# Target rules for target CMakeFiles/pikarun.dir
 
 # All Build rule for target.
-CMakeFiles/princerescue.dir/all: engine/CMakeFiles/engine.dir/all
-	$(MAKE) -f CMakeFiles/princerescue.dir/build.make CMakeFiles/princerescue.dir/depend
-	$(MAKE) -f CMakeFiles/princerescue.dir/build.make CMakeFiles/princerescue.dir/build
+CMakeFiles/pikarun.dir/all: engine/CMakeFiles/engine.dir/all
+	$(MAKE) -f CMakeFiles/pikarun.dir/build.make CMakeFiles/pikarun.dir/depend
+	$(MAKE) -f CMakeFiles/pikarun.dir/build.make CMakeFiles/pikarun.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles  3
-	@echo "Built target princerescue"
-.PHONY : CMakeFiles/princerescue.dir/all
+	@echo "Built target pikarun"
+.PHONY : CMakeFiles/pikarun.dir/all
 
 # Include target in all.
-all: CMakeFiles/princerescue.dir/all
+all: CMakeFiles/pikarun.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/princerescue.dir/rule: cmake_check_build_system
+CMakeFiles/pikarun.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/princerescue.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pikarun.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles 0
-.PHONY : CMakeFiles/princerescue.dir/rule
+.PHONY : CMakeFiles/pikarun.dir/rule
 
 # Convenience name for target.
-princerescue: CMakeFiles/princerescue.dir/rule
-.PHONY : princerescue
+pikarun: CMakeFiles/pikarun.dir/rule
+.PHONY : pikarun
 
 # clean rule for target.
-CMakeFiles/princerescue.dir/clean:
-	$(MAKE) -f CMakeFiles/princerescue.dir/build.make CMakeFiles/princerescue.dir/clean
-.PHONY : CMakeFiles/princerescue.dir/clean
+CMakeFiles/pikarun.dir/clean:
+	$(MAKE) -f CMakeFiles/pikarun.dir/build.make CMakeFiles/pikarun.dir/clean
+.PHONY : CMakeFiles/pikarun.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/princerescue.dir/clean
+clean: CMakeFiles/pikarun.dir/clean
 .PHONY : clean
 
 #=============================================================================
