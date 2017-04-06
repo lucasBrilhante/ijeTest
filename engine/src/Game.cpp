@@ -56,6 +56,8 @@ bool Game::init()
 	//parte de imagem
 	x = 0;y=0;
 	TextureManager::getInstance()->load("assets/pikasheet.png","pika",m_pRenderer);
+	TextureManager::getInstance()->load("assets/tilesheet.png","tile",m_pRenderer);
+
 	render();
 	//SDL_RenderCopy(m_pRenderer, m_pTexture, &m_sourceRectangle, &m_destinationRectangle);
 
@@ -66,9 +68,14 @@ bool Game::init()
 void Game::render()
 {
 	SDL_RenderClear(m_pRenderer);
+	TextureManager::getInstance()->drawFrame("tile",0,64,64,64,6,1,m_pRenderer);
+	TextureManager::getInstance()->drawFrame("tile",64,0,64,64,6,1,m_pRenderer);
+	TextureManager::getInstance()->drawFrame("tile",64,64,64,64,6,1,m_pRenderer);
+	TextureManager::getInstance()->drawFrame("tile",64,128,64,64,6,2,m_pRenderer);
 
-	TextureManager::getInstance()->drawFrame("pika",x,y,64,
-		64,i,j,m_pRenderer);
+	TextureManager::getInstance()->drawFrame("pika",x,y,64,64,i,j,m_pRenderer);
+
+
 	cout << "Frame desenhado\n";
 
 	SDL_RenderPresent(m_pRenderer);

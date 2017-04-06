@@ -5,6 +5,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/lucas/git/Jogos2017/sdl2/exemploLivro/engine/src/Game.cpp" "/home/lucas/git/Jogos2017/sdl2/exemploLivro/build/engine/CMakeFiles/engine.dir/src/Game.cpp.o"
+  "/home/lucas/git/Jogos2017/sdl2/exemploLivro/engine/src/Scene.cpp" "/home/lucas/git/Jogos2017/sdl2/exemploLivro/build/engine/CMakeFiles/engine.dir/src/Scene.cpp.o"
   "/home/lucas/git/Jogos2017/sdl2/exemploLivro/engine/src/TextureManager.cpp" "/home/lucas/git/Jogos2017/sdl2/exemploLivro/build/engine/CMakeFiles/engine.dir/src/TextureManager.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")

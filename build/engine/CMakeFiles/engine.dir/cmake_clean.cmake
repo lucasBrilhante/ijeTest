@@ -1,4 +1,5 @@
 FILE(REMOVE_RECURSE
+  "CMakeFiles/engine.dir/src/Scene.cpp.o"
   "CMakeFiles/engine.dir/src/TextureManager.cpp.o"
   "CMakeFiles/engine.dir/src/Game.cpp.o"
   "libengine.pdb"

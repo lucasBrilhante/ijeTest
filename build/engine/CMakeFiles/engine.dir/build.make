@@ -49,9 +49,32 @@ include engine/CMakeFiles/engine.dir/progress.make
 # Include the compile flags for this target's objects.
 include engine/CMakeFiles/engine.dir/flags.make
 
+engine/CMakeFiles/engine.dir/src/Scene.cpp.o: engine/CMakeFiles/engine.dir/flags.make
+engine/CMakeFiles/engine.dir/src/Scene.cpp.o: ../engine/src/Scene.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object engine/CMakeFiles/engine.dir/src/Scene.cpp.o"
+	cd /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/engine && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/Scene.cpp.o -c /home/lucas/git/Jogos2017/sdl2/exemploLivro/engine/src/Scene.cpp
+
+engine/CMakeFiles/engine.dir/src/Scene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/src/Scene.cpp.i"
+	cd /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/engine && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lucas/git/Jogos2017/sdl2/exemploLivro/engine/src/Scene.cpp > CMakeFiles/engine.dir/src/Scene.cpp.i
+
+engine/CMakeFiles/engine.dir/src/Scene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/src/Scene.cpp.s"
+	cd /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/engine && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lucas/git/Jogos2017/sdl2/exemploLivro/engine/src/Scene.cpp -o CMakeFiles/engine.dir/src/Scene.cpp.s
+
+engine/CMakeFiles/engine.dir/src/Scene.cpp.o.requires:
+.PHONY : engine/CMakeFiles/engine.dir/src/Scene.cpp.o.requires
+
+engine/CMakeFiles/engine.dir/src/Scene.cpp.o.provides: engine/CMakeFiles/engine.dir/src/Scene.cpp.o.requires
+	$(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/src/Scene.cpp.o.provides.build
+.PHONY : engine/CMakeFiles/engine.dir/src/Scene.cpp.o.provides
+
+engine/CMakeFiles/engine.dir/src/Scene.cpp.o.provides.build: engine/CMakeFiles/engine.dir/src/Scene.cpp.o
+
 engine/CMakeFiles/engine.dir/src/TextureManager.cpp.o: engine/CMakeFiles/engine.dir/flags.make
 engine/CMakeFiles/engine.dir/src/TextureManager.cpp.o: ../engine/src/TextureManager.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object engine/CMakeFiles/engine.dir/src/TextureManager.cpp.o"
 	cd /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/engine && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/TextureManager.cpp.o -c /home/lucas/git/Jogos2017/sdl2/exemploLivro/engine/src/TextureManager.cpp
 
@@ -74,7 +97,7 @@ engine/CMakeFiles/engine.dir/src/TextureManager.cpp.o.provides.build: engine/CMa
 
 engine/CMakeFiles/engine.dir/src/Game.cpp.o: engine/CMakeFiles/engine.dir/flags.make
 engine/CMakeFiles/engine.dir/src/Game.cpp.o: ../engine/src/Game.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object engine/CMakeFiles/engine.dir/src/Game.cpp.o"
 	cd /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/engine && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/Game.cpp.o -c /home/lucas/git/Jogos2017/sdl2/exemploLivro/engine/src/Game.cpp
 
@@ -97,12 +120,14 @@ engine/CMakeFiles/engine.dir/src/Game.cpp.o.provides.build: engine/CMakeFiles/en
 
 # Object files for target engine
 engine_OBJECTS = \
+"CMakeFiles/engine.dir/src/Scene.cpp.o" \
 "CMakeFiles/engine.dir/src/TextureManager.cpp.o" \
 "CMakeFiles/engine.dir/src/Game.cpp.o"
 
 # External object files for target engine
 engine_EXTERNAL_OBJECTS =
 
+engine/libengine.a: engine/CMakeFiles/engine.dir/src/Scene.cpp.o
 engine/libengine.a: engine/CMakeFiles/engine.dir/src/TextureManager.cpp.o
 engine/libengine.a: engine/CMakeFiles/engine.dir/src/Game.cpp.o
 engine/libengine.a: engine/CMakeFiles/engine.dir/build.make
@@ -115,6 +140,7 @@ engine/libengine.a: engine/CMakeFiles/engine.dir/link.txt
 engine/CMakeFiles/engine.dir/build: engine/libengine.a
 .PHONY : engine/CMakeFiles/engine.dir/build
 
+engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/src/Scene.cpp.o.requires
 engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/src/TextureManager.cpp.o.requires
 engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/src/Game.cpp.o.requires
 .PHONY : engine/CMakeFiles/engine.dir/requires

@@ -136,6 +136,30 @@ src/Game.cpp.s:
 	cd /home/lucas/git/Jogos2017/sdl2/exemploLivro/build && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
+src/Scene.o: src/Scene.cpp.o
+.PHONY : src/Scene.o
+
+# target to build an object file
+src/Scene.cpp.o:
+	cd /home/lucas/git/Jogos2017/sdl2/exemploLivro/build && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/src/Scene.cpp.o
+.PHONY : src/Scene.cpp.o
+
+src/Scene.i: src/Scene.cpp.i
+.PHONY : src/Scene.i
+
+# target to preprocess a source file
+src/Scene.cpp.i:
+	cd /home/lucas/git/Jogos2017/sdl2/exemploLivro/build && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/src/Scene.cpp.i
+.PHONY : src/Scene.cpp.i
+
+src/Scene.s: src/Scene.cpp.s
+.PHONY : src/Scene.s
+
+# target to generate assembly for a file
+src/Scene.cpp.s:
+	cd /home/lucas/git/Jogos2017/sdl2/exemploLivro/build && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/src/Scene.cpp.s
+.PHONY : src/Scene.cpp.s
+
 src/TextureManager.o: src/TextureManager.cpp.o
 .PHONY : src/TextureManager.o
 
@@ -172,6 +196,9 @@ help:
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
+	@echo "... src/Scene.o"
+	@echo "... src/Scene.i"
+	@echo "... src/Scene.s"
 	@echo "... src/TextureManager.o"
 	@echo "... src/TextureManager.i"
 	@echo "... src/TextureManager.s"

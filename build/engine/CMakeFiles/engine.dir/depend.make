@@ -6,6 +6,10 @@ engine/CMakeFiles/engine.dir/src/Game.cpp.o: ../engine/include/TextureManager.h
 engine/CMakeFiles/engine.dir/src/Game.cpp.o: ../engine/include/sdl2include.hpp
 engine/CMakeFiles/engine.dir/src/Game.cpp.o: ../engine/src/Game.cpp
 
+engine/CMakeFiles/engine.dir/src/Scene.cpp.o: ../engine/include/Scene.hpp
+engine/CMakeFiles/engine.dir/src/Scene.cpp.o: ../engine/include/sdl2include.hpp
+engine/CMakeFiles/engine.dir/src/Scene.cpp.o: ../engine/src/Scene.cpp
+
 engine/CMakeFiles/engine.dir/src/TextureManager.cpp.o: ../engine/include/TextureManager.h
 engine/CMakeFiles/engine.dir/src/TextureManager.cpp.o: ../engine/include/sdl2include.hpp
 engine/CMakeFiles/engine.dir/src/TextureManager.cpp.o: ../engine/src/TextureManager.cpp
