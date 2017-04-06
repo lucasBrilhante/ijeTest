@@ -4,7 +4,7 @@
 
 using namespace engine;
 
-bool Scene::init(SDL_Renderer *)
+bool Scene::init()
 {
     INFO("Init scene " << m_name);
     return true;
@@ -16,7 +16,7 @@ bool Scene::shutdown()
     return true;
 }
 
-bool Scene::draw(SDL_Renderer *)
+bool Scene::draw()
 {
     return true;
 }

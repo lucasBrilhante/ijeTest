@@ -1,1 +1,1 @@
-/usr/bin/c++     -std=c++11 -W -Wall -pedantic -std=c++11 -Wshadow -O2 -g    CMakeFiles/pikarun.dir/src/main.cpp.o  -o pikarun -rdynamic engine/libengine.a -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer 
+/usr/bin/c++     -std=c++11 -W -Wall -pedantic -std=c++11 -Wshadow -O2 -g    CMakeFiles/pikarun.dir/src/main.cpp.o CMakeFiles/pikarun.dir/src/GameScene.cpp.o  -o pikarun -rdynamic engine/libengine.a -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer 

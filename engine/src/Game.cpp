@@ -131,3 +131,17 @@ void Game::clean()
 	SDL_DestroyRenderer(m_pRenderer);
 	SDL_Quit();
 }
+void Game::run()
+{
+	init();
+	while(m_bRunning)
+	{
+		
+		//g_game->update();
+		render();
+		handleEvents();
+	}
+	
+	clean();
+
+}

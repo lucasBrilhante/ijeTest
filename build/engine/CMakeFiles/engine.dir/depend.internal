@@ -8,6 +8,7 @@ engine/CMakeFiles/engine.dir/src/Game.cpp.o
  /home/lucas/git/Jogos2017/sdl2/exemploLivro/engine/src/Game.cpp
 engine/CMakeFiles/engine.dir/src/Scene.cpp.o
  ../engine/include/Scene.hpp
+ ../engine/include/log.h
  ../engine/include/sdl2include.hpp
  /home/lucas/git/Jogos2017/sdl2/exemploLivro/engine/src/Scene.cpp
 engine/CMakeFiles/engine.dir/src/TextureManager.cpp.o

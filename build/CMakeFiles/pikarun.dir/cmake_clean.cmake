@@ -1,5 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/pikarun.dir/src/main.cpp.o"
+  "CMakeFiles/pikarun.dir/src/GameScene.cpp.o"
   "pikarun.pdb"
   "pikarun"
 )

@@ -4,6 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
+  "/home/lucas/git/Jogos2017/sdl2/exemploLivro/src/GameScene.cpp" "/home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles/pikarun.dir/src/GameScene.cpp.o"
   "/home/lucas/git/Jogos2017/sdl2/exemploLivro/src/main.cpp" "/home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles/pikarun.dir/src/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")

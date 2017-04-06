@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/lucas/git/Jogos2017/sdl2/exemploLivro/build
 CMakeFiles/pikarun.dir/all: engine/CMakeFiles/engine.dir/all
 	$(MAKE) -f CMakeFiles/pikarun.dir/build.make CMakeFiles/pikarun.dir/depend
 	$(MAKE) -f CMakeFiles/pikarun.dir/build.make CMakeFiles/pikarun.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles  4 5
 	@echo "Built target pikarun"
 .PHONY : CMakeFiles/pikarun.dir/all
 
@@ -69,7 +69,7 @@ all: CMakeFiles/pikarun.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pikarun.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pikarun.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles 0
 .PHONY : CMakeFiles/pikarun.dir/rule

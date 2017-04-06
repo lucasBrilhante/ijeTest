@@ -13,12 +13,7 @@ class Game
 		: title(name), m_window_size(window_size) {}
 		~Game() {}
 		// simply set the running variable to true
-		bool init();
-		void render();
-		void update();
-		void handleEvents();
-		void clean();
-		void draw();
+		void run();
 		// a function to access the private running variable
 		bool running() { return m_bRunning; }
 	
@@ -35,6 +30,14 @@ class Game
 		SDL_Window* m_pWindow;
 		SDL_Renderer* m_pRenderer;
 		bool m_bRunning;
+
+		bool init();
+		void render();
+		void update();
+		void handleEvents();
+		void clean();
+		void draw();
+
 	};
 
 #endif /* defined(__Game__) */

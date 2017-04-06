@@ -124,6 +124,30 @@ engine/fast:
 	$(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/build
 .PHONY : engine/fast
 
+src/GameScene.o: src/GameScene.cpp.o
+.PHONY : src/GameScene.o
+
+# target to build an object file
+src/GameScene.cpp.o:
+	$(MAKE) -f CMakeFiles/pikarun.dir/build.make CMakeFiles/pikarun.dir/src/GameScene.cpp.o
+.PHONY : src/GameScene.cpp.o
+
+src/GameScene.i: src/GameScene.cpp.i
+.PHONY : src/GameScene.i
+
+# target to preprocess a source file
+src/GameScene.cpp.i:
+	$(MAKE) -f CMakeFiles/pikarun.dir/build.make CMakeFiles/pikarun.dir/src/GameScene.cpp.i
+.PHONY : src/GameScene.cpp.i
+
+src/GameScene.s: src/GameScene.cpp.s
+.PHONY : src/GameScene.s
+
+# target to generate assembly for a file
+src/GameScene.cpp.s:
+	$(MAKE) -f CMakeFiles/pikarun.dir/build.make CMakeFiles/pikarun.dir/src/GameScene.cpp.s
+.PHONY : src/GameScene.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -158,6 +182,9 @@ help:
 	@echo "... pikarun"
 	@echo "... rebuild_cache"
 	@echo "... engine"
+	@echo "... src/GameScene.o"
+	@echo "... src/GameScene.i"
+	@echo "... src/GameScene.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -72,14 +72,39 @@ CMakeFiles/pikarun.dir/src/main.cpp.o.provides: CMakeFiles/pikarun.dir/src/main.
 
 CMakeFiles/pikarun.dir/src/main.cpp.o.provides.build: CMakeFiles/pikarun.dir/src/main.cpp.o
 
+CMakeFiles/pikarun.dir/src/GameScene.cpp.o: CMakeFiles/pikarun.dir/flags.make
+CMakeFiles/pikarun.dir/src/GameScene.cpp.o: ../src/GameScene.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lucas/git/Jogos2017/sdl2/exemploLivro/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pikarun.dir/src/GameScene.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pikarun.dir/src/GameScene.cpp.o -c /home/lucas/git/Jogos2017/sdl2/exemploLivro/src/GameScene.cpp
+
+CMakeFiles/pikarun.dir/src/GameScene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pikarun.dir/src/GameScene.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lucas/git/Jogos2017/sdl2/exemploLivro/src/GameScene.cpp > CMakeFiles/pikarun.dir/src/GameScene.cpp.i
+
+CMakeFiles/pikarun.dir/src/GameScene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pikarun.dir/src/GameScene.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lucas/git/Jogos2017/sdl2/exemploLivro/src/GameScene.cpp -o CMakeFiles/pikarun.dir/src/GameScene.cpp.s
+
+CMakeFiles/pikarun.dir/src/GameScene.cpp.o.requires:
+.PHONY : CMakeFiles/pikarun.dir/src/GameScene.cpp.o.requires
+
+CMakeFiles/pikarun.dir/src/GameScene.cpp.o.provides: CMakeFiles/pikarun.dir/src/GameScene.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pikarun.dir/build.make CMakeFiles/pikarun.dir/src/GameScene.cpp.o.provides.build
+.PHONY : CMakeFiles/pikarun.dir/src/GameScene.cpp.o.provides
+
+CMakeFiles/pikarun.dir/src/GameScene.cpp.o.provides.build: CMakeFiles/pikarun.dir/src/GameScene.cpp.o
+
 # Object files for target pikarun
 pikarun_OBJECTS = \
-"CMakeFiles/pikarun.dir/src/main.cpp.o"
+"CMakeFiles/pikarun.dir/src/main.cpp.o" \
+"CMakeFiles/pikarun.dir/src/GameScene.cpp.o"
 
 # External object files for target pikarun
 pikarun_EXTERNAL_OBJECTS =
 
 pikarun: CMakeFiles/pikarun.dir/src/main.cpp.o
+pikarun: CMakeFiles/pikarun.dir/src/GameScene.cpp.o
 pikarun: CMakeFiles/pikarun.dir/build.make
 pikarun: engine/libengine.a
 pikarun: CMakeFiles/pikarun.dir/link.txt
@@ -92,6 +117,7 @@ CMakeFiles/pikarun.dir/build: pikarun
 .PHONY : CMakeFiles/pikarun.dir/build
 
 CMakeFiles/pikarun.dir/requires: CMakeFiles/pikarun.dir/src/main.cpp.o.requires
+CMakeFiles/pikarun.dir/requires: CMakeFiles/pikarun.dir/src/GameScene.cpp.o.requires
 .PHONY : CMakeFiles/pikarun.dir/requires
 
 CMakeFiles/pikarun.dir/clean:
